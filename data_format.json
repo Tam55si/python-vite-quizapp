@@ -1,0 +1,14 @@
+[
+    {
+        "question_number": 1,
+        "domain": "Domain 2: Design Resilient Architectures > Resilient Storage & Databases",
+        "question": "A company collects data for temperature, humidity, and atmospheric pressure in cities across multiple continents...\nWhich solution meets these requirements?",
+        "options": [
+            "A. Turn on S3 Transfer Acceleration on the destination S3 bucket. Use multipart uploads to directly upload site data to the destination S3 bucket.",
+            "B. Upload the data from each site to an S3 bucket in the closest Region...",
+            "C. Schedule AWS Snowball Edge Storage Optimized device jobs daily...",
+            "D. Upload the data from each site to an Amazon EC2 instance..."
+        ],
+        "answer": "A. Turn on S3 Transfer Acceleration on the destination S3 bucket..."
+    }
+]
