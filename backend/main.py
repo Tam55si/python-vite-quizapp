@@ -16,7 +16,8 @@ app.add_middleware(
 @app.get("/api/questions")
 def get_questions():
     try:
-        with open("questions.json", "r") as f:
+        # Added encoding="utf-8" here
+        with open("questions.json", "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
         return []
@@ -31,7 +32,8 @@ async def submit_quiz(request: Request):
     
     log_entry = f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Name: {name} | Domain: {domain} | Score: {score}/{total}\n"
     
-    with open("quiz_logs.txt", "a") as f:
+    # Added encoding="utf-8" here as well for safety
+    with open("quiz_logs.txt", "a", encoding="utf-8") as f:
         f.write(log_entry)
         
     return {"status": "success"}

@@ -28,7 +28,7 @@ function App() {
   }, [selectedDomain, timeLeft, submitted]);
 
   // Extract unique domains from the fetched JSON
-  const availableDomains = [...new Set(questions.map(q => q.domain))];
+  const availableDomains = [...new Set(questions.map(q => q.domain))].sort();
   
   // Filter questions only for the active domain
   const activeQuestions = questions.filter(q => q.domain === selectedDomain);

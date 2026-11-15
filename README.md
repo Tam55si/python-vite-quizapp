@@ -10,7 +10,7 @@ This is a lightweight local application. The frontend is built with React (via V
    ```
 3. Run the FastAPI server:
    ```bash
-   uvicorn main:app --reload
+   python -m uvicorn main:app --reload
    ```
    *The backend will now listen on http://127.0.0.1:8000.*
    *You can add or update your questions anytime by editing `questions.json`.*
